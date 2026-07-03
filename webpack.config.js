@@ -1,19 +1,20 @@
-// webpack.config.js
 import path from "node:path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default {
-  mode: "development",
+  mode: "production",
   entry: "./src/index.js",
   output: {
     filename: "main.js",
-    path: path.resolve(import.meta.dirname, "dist"),
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/weather-app/",
     clean: true,
   },
-  devtool: "eval-source-map",
-  devServer: {
-    watchFiles: ["./src/template.html"],
-  },
+  devtool: false,
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",

@@ -2,9 +2,9 @@
   "name": "weather_app",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "start": "webpack serve --open"
   },
   "keywords": [],
   "author": "",
