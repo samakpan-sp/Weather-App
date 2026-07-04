@@ -11,7 +11,7 @@ export default {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/weather-app/",
+    publicPath: "/Weather-App/",
     clean: true,
   },
   devtool: false,
